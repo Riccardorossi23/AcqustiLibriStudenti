@@ -8,5 +8,6 @@ namespace Libri
 {
     public class Class1
     {
+
     }
 }

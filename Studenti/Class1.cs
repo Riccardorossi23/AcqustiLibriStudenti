@@ -8,5 +8,6 @@ namespace Studenti
 {
     public class Class1
     {
+
     }
 }
