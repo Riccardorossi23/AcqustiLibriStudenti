@@ -60,7 +60,22 @@
                                 </Grid.ColumnDefinitions>
                                 <Label Content="LIBRI" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" Foreground="#00801f" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
                                 <Label Content="Materia" Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <ComboBox x:Name="cmbMateria" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
+                                <ComboBox x:Name="cmbMateria" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40">
+                                    <ComboBoxItem Content="Italiano"></ComboBoxItem>
+                                    <ComboBoxItem Content="Matematica"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Informatica"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Chimica"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Fisica"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Religione"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Inglese"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Francese"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Spagnolo"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Tedesco"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Russo"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Greco"></ComboBoxItem>
+                                    <ComboBoxItem  Content="Latino"></ComboBoxItem>
+
+                                </ComboBox>
                                 <Label Content="Prezzo" Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
                                 <TextBox x:Name="txtPrezzo" Grid.Row="2" Grid.Column="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
                                 <Button x:Name="btnCaricaLibro" Content="Carica Libro" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" Width="120" Height="40"/>
@@ -92,9 +107,9 @@
                                     <RowDefinition Height="80"></RowDefinition>
                                     <RowDefinition Height="80"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Button x:Name="btnRegistraAcquisto" Content="Registra Acquisto" Grid.Row="0" FontSize="20" FontWeight="Bold" Width="180" Height="35"/>
-                                <Button x:Name="btnCancella" Content="Cancella" Grid.Row="4" FontSize="20" FontWeight="Bold" Width="180" Height="35"/>
-                                <Button x:Name="btnEsci" Content="Esci" Grid.Row="5" FontSize="20" FontWeight="Bold" Width="180" Height="35"/>
+                                <Button x:Name="btnRegistraAcquisto" Content="Registra Acquisto" Grid.Row="0" FontSize="20" FontWeight="Bold" Width="180" Height="35" Click="btnRegistraAcquisto_Click"/>
+                                <Button x:Name="btnCancella" Content="Cancella" Grid.Row="4" FontSize="20" FontWeight="Bold" Width="180" Height="35" Click="btnCancella_Click"/>
+                                <Button x:Name="btnEsci" Content="Esci" Grid.Row="5" FontSize="20" FontWeight="Bold" Width="180" Height="35" Click="btnEsci_Click"/>
 
                             </Grid>
                         </StackPanel>
