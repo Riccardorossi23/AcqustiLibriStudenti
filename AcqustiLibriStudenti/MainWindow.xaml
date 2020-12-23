@@ -5,23 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcqustiLibriStudenti"
         mc:Ignorable="d"
-        Title="Acquisti Libri Studenti" Height="540" Width="820">
-        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+         Title="AquistaLibro" Height="540" Width="820">
+    <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="250"></RowDefinition>
                     <RowDefinition Height="250"></RowDefinition>
                 </Grid.RowDefinitions>
+
                 <StackPanel Grid.Row="0" Background="AliceBlue">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="250"></RowDefinition>
                         </Grid.RowDefinitions>
+
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="400"></ColumnDefinition>
                             <ColumnDefinition Width="400"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
+
                         <StackPanel Grid.Row="0" Grid.Column="0" Background="AliceBlue">
                             <Grid>
                                 <Grid.RowDefinitions>
@@ -36,15 +41,16 @@
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
 
-                                <Label Content="STUDENTE" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" Foreground="#00801f" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <Label Content="Nome" Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txtNome" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
-                                <Label Content="Cognome" Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txtCognome" Grid.Row="2" Grid.Column="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
-                                <Button x:Name="btnCaricaStudente" Content="Carica Studente" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" Width="150" Height="40"/>
-                                <ComboBox x:Name="cmbStudenti" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="300" Height="40" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                                <Label Content="STUDENTE" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" Foreground="Green" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <Label Content="Nome:" Grid.Row="1" Grid.Column="0"  FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <TextBox x:Name="txtNome" Grid.Row="1" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
+                                <Label Content="Cognome:" Grid.Row="2" Grid.Column="0"  FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <TextBox x:Name="txtCognome" Grid.Row="2" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
+                                <Button x:Name="btnCaricaStudente" Content="Carica Studente" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" Width="200" Height="40" Click="btnCaricaStudente_Click"/>
+                                <ComboBox x:Name="cmbStudenti" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="350" Height="40" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                             </Grid>
                         </StackPanel>
+
                         <StackPanel Grid.Row="0" Grid.Column="1" Background="AliceBlue">
                             <Grid>
                                 <Grid.RowDefinitions>
@@ -58,32 +64,20 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Label Content="LIBRI" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" Foreground="#00801f" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <Label Content="Materia" Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <ComboBox x:Name="cmbMateria" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40">
-                                    <ComboBoxItem Content="Italiano"></ComboBoxItem>
-                                    <ComboBoxItem Content="Matematica"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Informatica"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Chimica"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Fisica"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Religione"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Inglese"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Francese"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Spagnolo"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Tedesco"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Russo"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Greco"></ComboBoxItem>
-                                    <ComboBoxItem  Content="Latino"></ComboBoxItem>
 
-                                </ComboBox>
-                                <Label Content="Prezzo" Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txtPrezzo" Grid.Row="2" Grid.Column="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
-                                <Button x:Name="btnCaricaLibro" Content="Carica Libro" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" Width="120" Height="40"/>
-                                <ComboBox x:Name="cmbLibri" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="300" Height="40" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                        </Grid>
-                    </StackPanel>
+                                <Label Content="LIBRO" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" Foreground="Green" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <Label Content="Materia:" Grid.Row="1" Grid.Column="0"  FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <TextBox x:Name="txtMateria" Grid.Row="1" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
+                                <Label Content="Prezzo:" Grid.Row="2" Grid.Column="0"  FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <TextBox x:Name="txtPrezzo" Grid.Row="2" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="180" Height="40"/>
+                                <Button x:Name="btnCaricaLibro" Content="Carica Libro" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  FontWeight="Bold" Width="200" Height="40" Click="btnCaricaLibro_Click"/>
+                                <ComboBox x:Name="cmbLibri" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="350" Height="40" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+
                     </Grid>
                 </StackPanel>
+
                 <StackPanel Grid.Row="1">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -93,6 +87,7 @@
                             <ColumnDefinition Width="530"></ColumnDefinition>
                             <ColumnDefinition Width="270"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
+
                         <StackPanel Grid.Row="0" Grid.Column="0">
                             <ListBox x:Name="lsbRisultato" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
                         </StackPanel>
@@ -100,17 +95,17 @@
                         <StackPanel Grid.Row="0" Grid.Column="1" Background="AliceBlue">
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="80"></RowDefinition>
-                                    <RowDefinition Height="0"></RowDefinition>
-                                    <RowDefinition Height="0"></RowDefinition>
-                                    <RowDefinition Height="0"></RowDefinition>
-                                    <RowDefinition Height="80"></RowDefinition>
-                                    <RowDefinition Height="80"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Button x:Name="btnRegistraAcquisto" Content="Registra Acquisto" Grid.Row="0" FontSize="20" FontWeight="Bold" Width="180" Height="35" Click="btnRegistraAcquisto_Click"/>
-                                <Button x:Name="btnCancella" Content="Cancella" Grid.Row="4" FontSize="20" FontWeight="Bold" Width="180" Height="35" Click="btnCancella_Click"/>
-                                <Button x:Name="btnEsci" Content="Esci" Grid.Row="5" FontSize="20" FontWeight="Bold" Width="180" Height="35" Click="btnEsci_Click"/>
 
+                                <Button x:Name="btnRegistraAcquisto" Content="Registra Acquisto" Grid.Row="0"  FontWeight="Bold" Width="180" Height="35" Click="btnRegistraAcquisto_Click"/>
+                                <Button x:Name="btnCancella" Content="Cancella" Grid.Row="4"  FontWeight="Bold" Width="180" Height="35" Click="btnCancella_Click"/>
+                                <Button x:Name="btnEsci" Content="Esci" Grid.Row="5"  FontWeight="Bold" Width="180" Height="35" Click="btnEsci_Click"/>
                             </Grid>
                         </StackPanel>
 
@@ -121,5 +116,6 @@
 
         </StackPanel>
 
+        
     </ScrollViewer>
 </Window>

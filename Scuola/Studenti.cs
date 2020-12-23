@@ -27,5 +27,6 @@ namespace Scuola
         {
             return $"Studente {nome} {cognome} di matricola {matricola}";
         }
+
     }
 }

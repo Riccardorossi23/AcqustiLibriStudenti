@@ -23,10 +23,11 @@ namespace Scuola
         {
             return ($"ISBN:{isbn} {materia} {prezzo}");
         }
-        public string GetDescrizione()
+        public string GetDescrizioneLibro()
         {
             return $"Libro di {materia} con ISBN {isbn} e prezzo di {prezzo}€";
         }
+
     }
 }
 

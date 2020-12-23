@@ -36,7 +36,7 @@ namespace AcqustiLibriStudenti
         {
             try
             {
-                if (txtNome.Text == "" || txtCognome.Text == "")
+                if (txtNome.Text == null || txtCognome.Text == null)
                 {
                     MessageBox.Show("Inserire tutti i valori", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                     txtNome.Text = "";
@@ -47,7 +47,7 @@ namespace AcqustiLibriStudenti
                 {
                     string nome = txtNome.Text;
                     string cognome = txtCognome.Text;
-                    Studenti s= new Studenti(nome, cognome,1);
+                    Studenti s = new Studenti(nome, cognome, matricola);
                     studente.Add(s);
                     cmbStudenti.Items.Add(s.GetMatricola());
                     matricola++;
@@ -70,38 +70,38 @@ namespace AcqustiLibriStudenti
         {
             try
             {
-                if (cmbMateria.Text == "" || txtPrezzo.Text == "")
+                if (txtMateria.Text == null || txtPrezzo.Text == null)
                 {
                     MessageBox.Show("Inserire tutti i valori", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    cmbMateria.Text = "";
+                    txtMateria.Text = "";
                     txtPrezzo.Text = "";
-                    cmbMateria.Focus();
+                    txtMateria.Focus();
                 }
                 else
                 {
-                    string materia = cmbMateria.Text;
+                    string materia = txtMateria.Text;
                     double prezzo = double.Parse(txtPrezzo.Text);
                     string isbn = "libr2020" + i.ToString();
                     i++;
                     Libri l = new Libri(materia, prezzo, isbn);
                     libro.Add(l);
                     cmbLibri.Items.Add(l.GetISBN());
-                    cmbMateria.Text = "";
+                    txtMateria.Text = "";
                     txtPrezzo.Text = "";
-                    cmbMateria.Focus();
+                    txtMateria.Focus();
                     cmbLibri.SelectedIndex = -1;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                cmbMateria.Text = "";
+                txtMateria.Text = "";
                 txtPrezzo.Text = "";
-                cmbMateria.Focus();
+                txtMateria.Focus();
             }
         }
 
-       
+
 
         private void btnRegistraAcquisto_Click(object sender, RoutedEventArgs e)
         {
@@ -113,7 +113,7 @@ namespace AcqustiLibriStudenti
             }
             else
             {
-                lsbRisultato.Items.Add($"{studente[indexS].Presentati()} acquista {libro[indexL].GetDescrizione()}.");
+                lsbRisultato.Items.Add($"{studente[indexS].Presentati()} acquista {libro[indexL].GetDescrizioneLibro()}.");
                 cmbStudenti.SelectedIndex = -1;
                 cmbLibri.SelectedIndex = -1;
             }
@@ -121,13 +121,32 @@ namespace AcqustiLibriStudenti
 
         private void btnCancella_Click(object sender, RoutedEventArgs e)
         {
-                lsbRisultato.Items.Clear();
-            
+            lsbRisultato.Items.Clear();
+
         }
         private void btnEsci_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
